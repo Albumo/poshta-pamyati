@@ -1,0 +1,278 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+
+    &__titling-wrap {
+        position: relative;
+        width: 100%;
+        margin-bottom: 30px;
+
+        img {
+            position: absolute;
+            top: -20px;
+            right: 0;
+            display: inline-block;
+            width: 100%;
+            max-width: 66px;
+            @include support(object-fit, cover) {
+                width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-flow: row wrap;
+        @include respond-from(xs) {
+            justify-content: space-between;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__group {
+        transition: all .5s ease-in-out;
+
+        textarea {
+            width: 100% !important;
+            height: 150px;
+            resize: none;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+
+        }
+
+    }
+
+    &__control {
+        width: 100%;
+        max-width: 466px;
+        margin-bottom: 25px;
+        padding: 15px 10px;
+        border: 2px solid #D9D9D9;
+        border-radius: 3px;
+
+        &::placeholder {
+            color: #B3B3B3;
+        }
+
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    &__image-wrap {
+        display: none;
+
+        img {
+            display: inline-block;
+            width: 100%;
+            max-width: 260px;
+            @include support(object-fit, cover) {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__sections-right {
+        display: none;
+    }
+
+    &__checkbox-wrap {
+        position: relative;
+        max-width: 735px;
+    }
+
+    &__checkbox {
+        margin-bottom: 20px;
+        input {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__files {
+        top: 0;
+        right: 0;
+        margin-bottom: 18px;
+
+        @include respond-from(lg) {
+            position: absolute;
+            margin-bottom: 0;
+        }
+    }
+
+    &__file {
+        color: #437BD1;
+        text-decoration: unset;
+        transition: all .35s ease-in-out;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 24px;
+            margin: 0 5px -3px 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='25' viewBox='0 0 14 25' fill='none'%3E%3Cpath d='M11.5625 5.75V18.6875C11.5625 21.1737 9.54875 23.1875 7.0625 23.1875C4.57625 23.1875 2.5625 21.1737 2.5625 18.6875V4.625C2.5625 3.0725 3.8225 1.8125 5.375 1.8125C6.9275 1.8125 8.1875 3.0725 8.1875 4.625V16.4375C8.1875 17.0562 7.68125 17.5625 7.0625 17.5625C6.44375 17.5625 5.9375 17.0562 5.9375 16.4375V5.75H4.25V16.4375C4.25 17.99 5.51 19.25 7.0625 19.25C8.615 19.25 9.875 17.99 9.875 16.4375V4.625C9.875 2.13875 7.86125 0.125 5.375 0.125C2.88875 0.125 0.875 2.13875 0.875 4.625V18.6875C0.875 22.1075 3.6425 24.875 7.0625 24.875C10.4825 24.875 13.25 22.1075 13.25 18.6875V5.75H11.5625Z' fill='%23437BD1'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: all .35s ease-in-out;
+        }
+
+        &:hover {
+            color: #FFB800;
+
+            &:before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='25' viewBox='0 0 14 25' fill='none'%3E%3Cpath d='M11.5625 5.75V18.6875C11.5625 21.1737 9.54875 23.1875 7.0625 23.1875C4.57625 23.1875 2.5625 21.1737 2.5625 18.6875V4.625C2.5625 3.0725 3.8225 1.8125 5.375 1.8125C6.9275 1.8125 8.1875 3.0725 8.1875 4.625V16.4375C8.1875 17.0562 7.68125 17.5625 7.0625 17.5625C6.44375 17.5625 5.9375 17.0562 5.9375 16.4375V5.75H4.25V16.4375C4.25 17.99 5.51 19.25 7.0625 19.25C8.615 19.25 9.875 17.99 9.875 16.4375V4.625C9.875 2.13875 7.86125 0.125 5.375 0.125C2.88875 0.125 0.875 2.13875 0.875 4.625V18.6875C0.875 22.1075 3.6425 24.875 7.0625 24.875C10.4825 24.875 13.25 22.1075 13.25 18.6875V5.75H11.5625Z' fill='%23FFB800'/%3E%3C/svg%3E");
+            }
+        }
+    }
+
+    @include respond-from(sm) {
+
+        &__inputs-wrap {
+            max-width: 450px;
+        }
+
+        &__titling-wrap {
+            position: relative;
+            width: 100%;
+            margin-bottom: 65px;
+
+            img {
+                display: none;
+            }
+        }
+
+        &__inputs {
+            display: flex;
+        }
+
+        &__image-wrap {
+            display: block;
+
+        }
+
+        &__group-city {
+            display: flex;
+
+            input {
+                &:first-child {
+                    margin-right: 25px;
+                }
+            }
+        }
+
+        &__group {
+            textarea {
+                width: 100% !important;
+                height: 150px;
+                max-width: 680px;
+                resize: none;
+            }
+        }
+    }
+
+    @include respond-from(md) {
+
+        &__inputs-wrap {
+            max-width: 466px;
+        }
+
+        &__group {
+            textarea {
+                height: 233px;
+                max-width: 735px;
+            }
+        }
+
+        &__sections {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &__sections-left {
+            width: 50%;
+        }
+
+        &__sections-right {
+            position: relative;
+            display: block;
+            width: 50%;
+        }
+
+        &__sections-image {
+            cursor: pointer;
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                display: inline-block;
+                width: 100%;
+                max-width: 320px;
+                transition: all .35s ease-in-out;
+                @include support(object-fit, cover) {
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+            }
+
+            &:hover {
+                img {
+                    opacity: 0;
+
+                    &:nth-child(2) {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-from(lg) {
+
+        &__image-wrap {
+            margin: -80px 0 0 80px;
+        }
+
+
+        &__sections-right {
+            position: relative;
+            display: block;
+            width: 50%;
+        }
+
+        &__sections-image {
+            img {
+                max-width: 680px;
+            }
+        }
+    }
+}

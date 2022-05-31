@@ -1,0 +1,41 @@
+mixin header()
+
+    | <!-- ********** header-S-1 ********** -->
+
+    header.header.js-header
+        .header__wrap
+            .header__wrapper.js-header-toggle
+                a(href="/").header__logo
+                    img(class="lazyload" src="static/img/content/logo.png" alt="logo image")
+                .header__burger-menu-wrap.js-header-burger
+                    a(href="/").header__insta
+                        img(class="lazyload" src="static/img/content/insta.png" alt="logo image")
+                    .header__burger-menu
+                        span
+                        span
+                        span
+                nav.header__nav
+                    .header__nav-wrap
+                        .header__navi
+                            ul.header__list.header__menu-inner
+                                li.header__list-item.header__menu-item
+                                    a.header__menu-link.active.header__list-link.js-to-item(href="#shelter") Главная
+                                li.header__list-item.header__menu-item
+                                    a.header__menu-link.header__about-link.header__list-link.js-to-item(href="#pets") Истории
+                                li.header__list-item.header__menu-item
+                                    a.header__menu-link.header__vendors-link.header__list-link.js-to-item(href="#help") Написать
+                                li.header__list-item.header__menu-item
+                                    a.header__menu-link.header__contacts-link.header__list-link.js-to-item(href="#footer") Помочь нам
+                                li.header__list-item.header__menu-item
+                                    a.header__menu-link.header__list-link.js-to-item(href="#shelter") Партнерство
+                                li.header__list-item.header__menu-item
+                                    a.header__menu-link.header__about-link.header__list-link.js-to-item(href="#pets") Контакты
+                                li.header__list-item.header__menu-item.header__lang
+                                    a(href="/").header__insta.header__menu-link.header__vendors-link.header__list-link
+                                        img(class="lazyload" src="static/img/content/insta.png" alt="logo image")
+                                    select.header__select-lang(name='lang')
+                                        option(value='uk' selected='') UK
+                                        option(value='ru') RU
+                                        option(value='en') EN
+
+    | <!-- ********** header-S-1 ********** -->

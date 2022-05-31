@@ -1,0 +1,30 @@
+mixin  banner()
+
+    | <!-- ********** banner-S-1 ********** -->
+
+    .banner
+        .banner__wrap
+
+            .banner__image
+                img(class="lazyload" src="static/img/content/banner-pic.png" alt="banner image")
+            .banner__text
+                .banner__text-decor
+                    .banner__text-img
+                        img(class="lazyload" src="static/img/content/banner-img.png" alt="banner image")
+                        img(class="lazyload" src="static/img/content/banner-img-hov.png" alt="banner image")
+                    .banner__dec-mob
+                        img(class="lazyload" src="static/img/content/banner-img2.png" alt="banner image")
+                .banner__txt
+                    h2 Ваша исторія, про яку не забудуть
+                    p Ми впевненні, що історії цієї війни – це історії нашої перемоги! Вони не повинні загубитись. Залиште свою розповідь чи розповідь близьких, а ми допоможемо їй жити у книзі. <br>Книзі пам'яті.
+                    .banner__btn-wrap
+                        button.btn
+                            img.btn__image(class="lazyload" src="static/img/content/button-bg.png" alt="banner image")
+                            img.btn__image.btn__image-hov(class="lazyload" src="static/img/content/button-bg-hov.png" alt="banner image")
+                            span.btn__text ПОМОЧЬ ПРОЕКТУ
+                .banner__text-img.banner__text-img--nth.hide-md
+                    img(class="lazyload" src="static/img/content/banner-img.png" alt="banner image")
+                    img(class="lazyload" src="static/img/content/banner-img-hov.png" alt="banner image")
+                .banner__text-image.show-md
+                    img(class="lazyload" src="static/img/content/banner-img2.png" alt="banner image")
+                    img(class="lazyload" src="static/img/content/banner-img2-hov.png" alt="banner image")

@@ -1,0 +1,70 @@
+mixin payment()
+    .payment
+
+        .payment__wrap
+            .payment__text-wrap
+                .payment__text-title Помогая проекту вы:
+                .payment__text
+                    p Основной целью создания Фонда является благотворительная деятельность в сферах определенных Уставом Фонда. Целью благотворительной деятельности Фонда является оказание помощи законным интересам бенефициаров в указанных Уставом направлениях. Основной целью создания Фонда является благотвори-тельная деятельность в сферах определенных Уставом Фонда. Целью благотворительной деятельности.
+
+                    p Фонда является оказание помощи законным интересам бенефициаров в указанных Уставом направлениях.
+            .payment__section
+                .payment__form-wrap
+                    form.payment__form
+                        label(for="sum") Cумма
+                        .payment__form-sum
+                            input(type="text" name="name" id="sum" placeholder="0.00" required)
+                            select(name='slct')
+                                option(value='uah') UAH
+                                option(value='usd') USD
+                        label(for="pay") Назначение платежа
+                        input(type="text" name="name" id="pay" placeholder="" required)
+                .payment__pb-wrap
+                    .payment__pb-title Оплатить через Приват24
+                    a(href="#").payment__pb
+                        .payment__pb-label 24
+                        span Privat24
+            .payment__section-nth
+                .payment__qr-wrap
+                    .payment__qr-titling
+                        .payment__form-subtitle QR - код
+                        .payment__form-title Оплата с помощью кода
+                    .payment__form-wrap.payment__form-qr
+                        form.payment__form
+                            .payment__img
+                                img(class="lazyload" src="static/img/content/qr.jpg" alt="qr")
+                            .payment__card.payment__card-qr
+                                input(type="text" name="qr" id="qr" placeholder="" required)
+                                a.payment__card-question(href="#") ?
+                                label(for="qr") Направьте камеру Вашего устройства на код
+                            .payment__btn-wrap
+                                button.btn(type='submit')
+                                    img.btn__image(class="lazyload" src="static/img/content/button-bg.png" alt="banner image")
+                                    img.btn__image.btn__image-hov(class="lazyload" src="static/img/content/button-bg-hov.png" alt="banner image")
+                                    span.btn__text СКАНИРОВАТЬ
+                .payment__q-img
+                    .banner__text-img
+                        img(class="lazyload" src="static/img/content/banner-img.png" alt="banner image")
+                        img(class="lazyload" src="static/img/content/banner-img-hov.png" alt="banner image")
+                .payment__card-nth
+                    .payment__card-nth-titling
+                        .payment__form-subtitle Карта
+                        .payment__form-title Другой споспоб оплаты
+                    .payment__form-wrap
+                        form.payment__form.payment__form-card
+                            label(for="card") Номер карты
+                            input.payment__card(type="text" name="card" id="card" placeholder=".... .... .... ...." required)
+                            .payment__form-card.payment__form-numbers
+                                .payment__form-date
+                                    label(for="pay") Срок действия
+                                    input(type="text" name="name" id="pay" placeholder="MM / YY" required)
+                                .payment__form-cv
+                                    label(for="pay") CVV2
+                                    input.payment__cv(type="text" name="name" id="pay" placeholder="..." required)
+                                    a.payment__card-question(href="#") ?
+                            p Нажимая кнопку “Оплатить”,<br> Вы принемаете</br><a href="#">Пользовательское соглашение</a>
+                            .payment__btn-wrap
+                                button.btn(type='submit')
+                                    img.btn__image(class="lazyload" src="static/img/content/button-bg.png" alt="banner image")
+                                    img.btn__image.btn__image-hov(class="lazyload" src="static/img/content/button-bg-hov.png" alt="banner image")
+                                    span.btn__text ОПЛАТИТЬ

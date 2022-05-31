@@ -1,0 +1,25 @@
+extends _page-template
+
+block content
+    | <!-- skin 1 -->
+
+    .w-inner
+        .w-center
+            +banner
+        .w-gap-sm
+        h2.text-center ИСТОРИИ ЖИЗНИ И СМЕРТИ
+        +slider
+        .w-center
+            .w-gap-lg
+            +form
+            .w-gap-xl
+                h2.text-center Помощь проекту
+                +payment
+            .w-gap-lg
+            .img-left
+                .banner__text-img
+                    img(class="lazyload" src="static/img/content/banner-img.png" alt="banner image")
+                    img(class="lazyload" src="static/img/content/banner-img-hov.png" alt="banner image")
+            h2.text-center ПАРТНЕРСТВО
+            +partnership
+            .w-gap-sm

@@ -1,0 +1,144 @@
+.footer {
+    position: relative;
+    background: $footer-bg;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+
+    &__wrap {padding: 30px 0}
+
+    &__title {
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #951B1B;
+    }
+
+    a {
+        color: #363636;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: -35px;
+        display: inline-block;
+        width: 100%;
+        height: 35px;
+        background: url("../img/content/leaf_bg.png") no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__more {
+        position: relative;
+        font-weight: 600;
+        color: #437BD1!important;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin: 0 5px -2px 5px;
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1.441c2.136 0 2.39.009 3.233.047.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.046 1.097.046 3.233s-.008 2.39-.046 3.233c-.036.78-.166 1.203-.276 1.485-.145.374-.318.64-.598.92-.28.28-.546.453-.92.598-.282.11-.705.24-1.485.276-.844.038-1.097.047-3.233.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.478 2.478 0 0 1-.598-.92c-.11-.282-.24-.705-.276-1.485-.038-.844-.047-1.097-.047-3.233s.009-2.39.047-3.233c.036-.78.166-1.203.276-1.485.145-.374.318-.64.598-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.844-.038 1.097-.047 3.233-.047ZM8 0C5.827 0 5.555.01 4.702.048 3.85.087 3.269.222 2.76.42a3.921 3.921 0 0 0-1.417.923c-.445.444-.719.89-.923 1.417-.198.509-.333 1.09-.372 1.942C.01 5.555 0 5.827 0 8s.01 2.445.048 3.298c.039.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.719 1.417.923.509.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.445-.01 3.298-.048c.852-.039 1.433-.174 1.942-.372a3.922 3.922 0 0 0 1.417-.923c.445-.444.719-.89.923-1.417.198-.509.333-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.298c-.039-.852-.174-1.433-.372-1.942a3.923 3.923 0 0 0-.923-1.417A3.922 3.922 0 0 0 13.24.42c-.509-.198-1.09-.333-1.942-.372C10.445.01 10.173 0 8 0Zm0 3.892a4.108 4.108 0 1 0 0 8.216 4.108 4.108 0 0 0 0-8.216Zm0 6.775a2.667 2.667 0 1 1 0-5.334 2.667 2.667 0 0 1 0 5.334Zm5.23-6.937a.96.96 0 1 1-1.92 0 .96.96 0 0 1 1.92 0Z' fill='%23437BD1'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    &__nav {
+        @extend %ul-reset
+    }
+
+    &__nav-item {
+        margin-bottom: 10px;
+    }
+
+    &__adress {margin-bottom: 15px}
+    &__mail {
+        margin-top: 15px;
+    }
+
+    &__tel,&__mail {
+        font-weight: 600;
+    }
+
+    &__first,&__nav-wrap {margin-bottom: 35px}
+
+    &__sicial-img, &__image {
+        display: none;
+    }
+
+    @include respond-from(md) {
+
+        &__wrap {
+            max-width: 1530px;
+            margin: 0 auto;
+        }
+
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -66px;
+            right: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 66px;
+            background: url("../img/content/leaf_bg.png") no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &__title {
+            margin-bottom: 18px;
+            font-size: 18px;
+            color: #204072;
+        }
+        &__wrap {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 100px 0;
+        }
+
+        &__sicial-img, &__image {
+            display: block;
+            margin-top: 0;
+        }
+
+        &__contacts {
+            padding-left: 40px;
+        }
+
+        &__sicial-img {
+            margin-top: 25px;
+        }
+
+        &__first {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 40%;
+        }
+
+
+
+        &__image {
+            display: flex;
+            width: 228px;
+
+            img {
+                align-self: end;
+                width: 100%;
+            }
+
+        }
+    }
+
+}

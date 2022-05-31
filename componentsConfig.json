@@ -1,0 +1,41 @@
+{
+  "component_header": {
+    "number": "S_1",
+    "name": "header"
+  },
+
+  "component_banner": {
+    "number": "S_1",
+    "name": "banner"
+  },
+
+  "component_story": {
+    "number": "S_1",
+    "name": "story"
+  },
+
+  "component_slider": {
+    "number": "S_1",
+    "name": "slider"
+  },
+
+  "component_payment": {
+    "number": "S_1",
+    "name": "payment"
+  },
+
+  "component_partnership": {
+    "number": "S_1",
+    "name": "partnership"
+  },
+
+  "component_form": {
+    "number": "S_1",
+    "name": "form"
+  },
+
+  "component_footer": {
+    "number": "S_1",
+    "name": "footer"
+  }
+}

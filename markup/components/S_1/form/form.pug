@@ -1,0 +1,46 @@
+mixin form()
+    .form
+        .form__titling-wrap
+            h2.form__titling.text-center ТВОЯ ИСТОРИЯ
+            img(class="lazyload" src="static/img/content/post-leaf.png" alt="form image")
+        .form__wrap
+            .form__sections
+                .form__sections-left
+                    .form__title Подились своей историей с другими:
+
+                    form.form__form(action="")
+                        .form__inputs
+                            .form__inputs-wrap
+                                .form__group
+                                    input.form__control(type="text" name="name" id="name" placeholder="ФИО" required)
+                                .form__group
+                                    input.form__control(type="email" name="email" id="email" placeholder="Почта/Телефон" required)
+                                .form__group.form__group-city
+                                    input.form__control(type="email" name="email" id="email" placeholder="Город" required)
+                                    input.form__control(type="email" name="email" id="email" placeholder="Дата" required)
+                            .form__image-wrap
+                                img(class="lazyload" src="static/img/content/post-leaf.png" alt="form image")
+                        .form__group
+                            textarea.form__control(type="text" name="message" id="message" placeholder="Тут вы можете написать свою историю:" required)
+                        .form__checkbox-wrap
+                            .form__files
+                                a.form__file(href="#") Прикрепить файлы
+                            .form__checkbox
+                                input#vehicle1(type='checkbox' name='vehicle1' value='Bike')
+                                label(for='vehicle1')  Согласие на обработку данных
+                                br
+                                input#vehicle2(type='checkbox' name='vehicle2' value='Car')
+                                label(for='vehicle2')  Анонимная публикация
+                                br
+                                input#vehicle3(type='checkbox' name='vehicle3' value='Boat')
+                                label(for='vehicle3')  Соглашение на публикацию и редакцию моего материала *
+
+                        .form__group
+                            button.btn
+                                img.btn__image(class="lazyload" src="static/img/content/button-bg.png" alt="banner image")
+                                img.btn__image.btn__image-hov(class="lazyload" src="static/img/content/button-bg-hov.png" alt="banner image")
+                                span.btn__text ОТПРАВИТЬ
+                .form__sections-right
+                    .form__sections-image
+                        img(class="lazyload" src="static/img/content/form-image.png" alt="form image")
+                        img(class="lazyload" src="static/img/content/form-image-hov.png" alt="form image")

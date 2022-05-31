@@ -1,0 +1,209 @@
+.slider {
+    padding: 40px 0 0;
+    background: #EEE;
+    border: 2px solid #D9D9D9;
+    border-radius: 3px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    &__wrap {
+        position: relative;
+        padding: 10px 0 100px;
+
+        .slick-arrow {
+            @extend %bttn-reset;
+            position: absolute;
+            bottom: 40px;
+            width: 18px;
+            height: 36px;
+            background-image: url("data:image/svg+xml,%3Csvg width='13' height='26' viewBox='0 0 13 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.0516357 2.7124L0.188652 0.546978L12.6415 12.9999L0.188654 25.4526L0.0516357 23.2874L10.3391 12.9999L0.0516357 2.7124Z' fill='%23FFB800'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 0;
+
+            &:hover {
+            }
+
+        }
+
+        .slick-next {
+            left: calc(80% - 9px);
+
+        }
+
+        .slick-prev {
+            left: calc(20% - 9px);
+            transform: rotate(180deg);
+
+        }
+    }
+
+    &__author {
+        font-weight: 600;
+        color: #437BD1;
+    }
+
+    &__date {
+        color: #A1A1A1;
+    }
+
+    &__story {
+        font-weight: bold;
+        color: #363636;
+    }
+
+    &__slide-txt {
+        display: -webkit-box;
+        height: 158px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 8;
+
+
+        p {
+            line-height: 1.3;
+        }
+    }
+
+    &__btn-wrap {
+        margin-top: 15px;
+    }
+
+    &__slide-images {
+        margin-top: 30px;
+
+        img {
+            display: inline-block;
+            width: 100%;
+            @include support(object-fit, cover) {
+                width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    @include respond-from(sm) {
+
+        &__slide-images {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+
+    }
+
+    @include respond-from(md) {
+        background: none;
+        border: none;
+        box-shadow: none;
+        &__slide {
+            display: flex!important;
+            justify-content: space-between;
+        }
+
+        &__slide-images {
+            display: flex;
+            flex-direction: column;
+            max-height: 300px;
+            margin: 0 0 0 26px;
+
+            img {
+
+                &:last-child {
+                    display: block;
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        &__wrap {
+            margin-top: 20px;
+        }
+
+        &__slide-wrap {
+            max-height: 630px;
+            padding: 44px;
+            background: #EEE;
+            border: 1px solid #B3B3B3;
+            border-radius: 3px
+
+        }
+
+        &__slide-txt {
+            height: 100%;
+            max-width: 600px;
+            overflow-y: scroll;
+            -webkit-line-clamp: unset;
+
+        }
+
+        &__btn-wrap {
+            display: none;
+        }
+
+        &__author-wrap {
+            br {
+                display: none;
+            }
+        }
+
+    }
+
+    @include respond-from(lg) {
+
+        &__slide-images {
+            max-width: unset;
+            margin: 0 0 0 26px;
+        }
+
+        &__slide-wrap {
+            max-height: 630px;
+            padding: 44px;
+            background: #EEE;
+
+        }
+
+        &__slide-txt {
+            height: 100%;
+            max-width: 1062px;
+            overflow-y: scroll;
+            -webkit-line-clamp: unset;
+
+        }
+
+        &__btn-wrap {
+            display: none;
+        }
+
+        &__wrap {
+            .slick-arrow {
+                bottom: calc(56.5% - 18px);
+                width: 22px;
+                height: 44px;
+                z-index: 99;
+            }
+
+            .slick-next {
+                right: -40px;
+                left: unset;
+            }
+
+            .slick-prev {
+                left: -45px;
+                transform: rotate(180deg);
+
+            }
+        }
+
+    }
+
+    @include respond-from(xlg) {
+
+    }
+
+}
